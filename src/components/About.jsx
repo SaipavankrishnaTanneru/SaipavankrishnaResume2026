@@ -9,6 +9,15 @@ const cards = [
   { icon: FaRocket, title: "Distributed", desc: "Saga, Kafka, SeaweedFS, Nginx" },
 ];
 
+const strengths = [
+  "End-to-end module ownership",
+  "Legacy system re-engineering",
+  "Distributed transaction patterns",
+  "Cross-database data migration",
+  "Event-driven microservices",
+  "Performance & scalability focus",
+];
+
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
@@ -53,6 +62,14 @@ export default function About() {
                 >
                   {t}
                 </span>
+              ))}
+            </div>
+            <div className="grid grid-cols-2 gap-3 pt-4">
+              {strengths.map((s) => (
+                <div key={s} className="flex items-center gap-2 text-sm text-slate-300">
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                  {s}
+                </div>
               ))}
             </div>
           </motion.div>
