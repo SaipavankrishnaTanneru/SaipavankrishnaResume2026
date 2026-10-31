@@ -4,7 +4,7 @@ import { education } from "../data/resume";
 
 export default function Education() {
   return (
-    <section id="education" className="relative py-24 bg-slate-900/40">
+    <section id="education" className="relative py-24 bg-slate-50">
       <div className="max-w-4xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -13,8 +13,8 @@ export default function Education() {
           transition={{ duration: 0.7 }}
           className="text-center mb-14"
         >
-          <p className="text-brand-400 font-semibold tracking-widest text-sm uppercase">Background</p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-white mt-2">
+          <p className="text-brand-600 font-semibold tracking-widest text-sm uppercase">Background</p>
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-900 mt-2">
             Education
           </h2>
         </motion.div>
@@ -27,7 +27,7 @@ export default function Education() {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: i * 0.1 }}
             whileHover={{ y: -6 }}
-            className="relative p-8 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-900 to-brand-900/20 border border-slate-800 hover:border-brand-500/40 transition-colors overflow-hidden"
+            className="relative p-8 rounded-3xl bg-gradient-to-br from-white via-white to-brand-100/20 border border-slate-200 hover:border-brand-500/40 transition-colors overflow-hidden"
           >
             <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-brand-500/10 blur-3xl" />
             <div className="flex items-start gap-5">
@@ -35,9 +35,9 @@ export default function Education() {
                 <FaGraduationCap />
               </div>
               <div className="flex-1">
-                <h3 className="font-display text-2xl font-bold text-white">{e.degree}</h3>
-                <p className="text-accent font-medium mt-1">{e.institute}</p>
-                <div className="flex flex-wrap gap-4 text-sm text-slate-400 mt-3">
+                <h3 className="font-display text-2xl font-bold text-slate-900">{e.degree}</h3>
+                <p className="text-cyan-600 font-medium mt-1">{e.institute}</p>
+                <div className="flex flex-wrap gap-4 text-sm text-slate-500 mt-3">
                   <span className="flex items-center gap-1.5"><FaCalendarAlt /> {e.period}</span>
                   <span className="flex items-center gap-1.5"><FaAward /> {e.score}</span>
                 </div>

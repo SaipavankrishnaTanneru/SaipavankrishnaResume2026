@@ -4,7 +4,7 @@ import { personal } from "../data/resume";
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative py-24 bg-slate-950 overflow-hidden">
+    <section id="contact" className="relative py-24 bg-white overflow-hidden">
       <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-brand-600/20 blur-3xl" />
       <div className="relative max-w-5xl mx-auto px-6">
         <motion.div
@@ -14,11 +14,11 @@ export default function Contact() {
           transition={{ duration: 0.7 }}
           className="text-center mb-14"
         >
-          <p className="text-brand-400 font-semibold tracking-widest text-sm uppercase">Let's talk</p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-white mt-2">
-            Get In <span className="text-accent">Touch</span>
+          <p className="text-brand-600 font-semibold tracking-widest text-sm uppercase">Let's talk</p>
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-900 mt-2">
+            Get In <span className="text-cyan-600">Touch</span>
           </h2>
-          <p className="text-slate-400 mt-4 max-w-xl mx-auto">
+          <p className="text-slate-500 mt-4 max-w-xl mx-auto">
             Have an opportunity or a project in mind? I'd love to hear from you.
           </p>
         </motion.div>
@@ -40,14 +40,14 @@ export default function Contact() {
                 key={c.label}
                 href={c.href || "#"}
                 whileHover={{ x: 6 }}
-                className="flex items-center gap-4 p-5 rounded-2xl bg-slate-900 border border-slate-800 hover:border-brand-500/40 transition-colors"
+                className="flex items-center gap-4 p-5 rounded-2xl bg-white border border-slate-200 hover:border-brand-500/40 transition-colors"
               >
-                <div className="w-12 h-12 rounded-xl bg-brand-500/15 flex items-center justify-center text-brand-400 text-xl">
+                <div className="w-12 h-12 rounded-xl bg-brand-500/15 flex items-center justify-center text-brand-600 text-xl">
                   <c.icon />
                 </div>
                 <div>
                   <div className="text-xs text-slate-500 uppercase tracking-wider">{c.label}</div>
-                  <div className="text-white font-medium">{c.value}</div>
+                  <div className="text-slate-900 font-medium">{c.value}</div>
                 </div>
               </motion.a>
             ))}
@@ -64,7 +64,7 @@ export default function Contact() {
                   target="_blank"
                   rel="noreferrer"
                   whileHover={{ y: -4, scale: 1.1 }}
-                  className="w-12 h-12 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-white hover:border-brand-500/40 transition-colors text-xl"
+                  className="w-12 h-12 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:text-slate-900 hover:border-brand-500/40 transition-colors text-xl"
                   aria-label={s.label}
                 >
                   <s.icon />
@@ -79,30 +79,30 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
             onSubmit={(e) => e.preventDefault()}
-            className="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4"
+            className="p-6 rounded-2xl bg-white border border-slate-200 space-y-4"
           >
             <div>
-              <label className="text-xs text-slate-400 uppercase tracking-wider">Name</label>
+              <label className="text-xs text-slate-500 uppercase tracking-wider">Name</label>
               <input
                 type="text"
                 placeholder="Your name"
-                className="mt-1 w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors"
+                className="mt-1 w-full px-4 py-3 rounded-xl bg-slate-100 border border-slate-300 text-slate-900 placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors"
               />
             </div>
             <div>
-              <label className="text-xs text-slate-400 uppercase tracking-wider">Email</label>
+              <label className="text-xs text-slate-500 uppercase tracking-wider">Email</label>
               <input
                 type="email"
                 placeholder="you@example.com"
-                className="mt-1 w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors"
+                className="mt-1 w-full px-4 py-3 rounded-xl bg-slate-100 border border-slate-300 text-slate-900 placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors"
               />
             </div>
             <div>
-              <label className="text-xs text-slate-400 uppercase tracking-wider">Message</label>
+              <label className="text-xs text-slate-500 uppercase tracking-wider">Message</label>
               <textarea
                 rows={4}
                 placeholder="Say hello..."
-                className="mt-1 w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors resize-none"
+                className="mt-1 w-full px-4 py-3 rounded-xl bg-slate-100 border border-slate-300 text-slate-900 placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors resize-none"
               />
             </div>
             <motion.button

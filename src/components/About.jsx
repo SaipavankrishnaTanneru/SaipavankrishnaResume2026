@@ -25,7 +25,7 @@ const fadeUp = {
 
 export default function About() {
   return (
-    <section id="about" className="relative py-24 bg-slate-950">
+    <section id="about" className="relative py-24 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial="hidden"
@@ -34,9 +34,9 @@ export default function About() {
           variants={fadeUp}
           className="text-center mb-14"
         >
-          <p className="text-brand-400 font-semibold tracking-widest text-sm uppercase">About Me</p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-white mt-2">
-            Turning legacy into <span className="text-accent">modern systems</span>
+          <p className="text-brand-600 font-semibold tracking-widest text-sm uppercase">About Me</p>
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-900 mt-2">
+            Turning legacy into <span className="text-cyan-600">modern systems</span>
           </h2>
         </motion.div>
 
@@ -46,7 +46,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="space-y-5 text-slate-300 leading-relaxed"
+            className="space-y-5 text-slate-600 leading-relaxed"
           >
             <p>{personal.summary}</p>
             <p>
@@ -58,7 +58,7 @@ export default function About() {
               {["React JS", "Spring Boot", "PostgreSQL", "Kafka", "Saga", "SeaweedFS"].map((t) => (
                 <span
                   key={t}
-                  className="px-3 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/30 text-brand-300 text-sm"
+                  className="px-3 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/30 text-brand-600 text-sm"
                 >
                   {t}
                 </span>
@@ -66,7 +66,7 @@ export default function About() {
             </div>
             <div className="grid grid-cols-2 gap-3 pt-4">
               {strengths.map((s) => (
-                <div key={s} className="flex items-center gap-2 text-sm text-slate-300">
+                <div key={s} className="flex items-center gap-2 text-sm text-slate-600">
                   <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                   {s}
                 </div>
@@ -83,13 +83,13 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 whileHover={{ y: -8, scale: 1.03 }}
-                className="p-5 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-800 hover:border-brand-500/40 transition-colors"
+                className="p-5 rounded-2xl bg-gradient-to-br from-white to-slate-50 border border-slate-200 hover:border-brand-500/40 transition-colors"
               >
-                <div className="w-12 h-12 rounded-xl bg-brand-500/15 flex items-center justify-center text-brand-400 text-2xl mb-3">
+                <div className="w-12 h-12 rounded-xl bg-brand-500/15 flex items-center justify-center text-brand-600 text-2xl mb-3">
                   <c.icon />
                 </div>
-                <h3 className="font-display font-semibold text-white">{c.title}</h3>
-                <p className="text-slate-400 text-sm mt-1">{c.desc}</p>
+                <h3 className="font-display font-semibold text-slate-900">{c.title}</h3>
+                <p className="text-slate-500 text-sm mt-1">{c.desc}</p>
               </motion.div>
             ))}
           </div>
