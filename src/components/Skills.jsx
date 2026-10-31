@@ -46,16 +46,6 @@ export default function Skills() {
                     <h3 className="font-display font-semibold text-slate-900 text-lg">{g.group}</h3>
                   </div>
 
-                <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden mb-4">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${g.level}%` }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1.2, delay: gi * 0.08 + 0.2, ease: "easeOut" }}
-                    className="h-full bg-gradient-to-r from-brand-500 to-accent rounded-full"
-                  />
-                </div>
-
                 <div className="flex flex-wrap gap-2">
                   {g.items.map((it, i) => (
                     <motion.span
